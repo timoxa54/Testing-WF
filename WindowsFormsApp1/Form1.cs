@@ -46,5 +46,10 @@ namespace WindowsFormsApp1
         {
             tbValue.Text = e.KeyCode.ToString() + "  " + e.KeyValue.ToString();
         }
+
+        private void ScrollBar1_ValueChanged(object sender, EventArgs e)
+        {
+            TBscroll.Text = ScrollBar1.Value.ToString();
+        }
     }
 }

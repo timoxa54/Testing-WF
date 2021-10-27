@@ -34,6 +34,8 @@ namespace WindowsFormsApp1
             this.TB2 = new System.Windows.Forms.TextBox();
             this.TB3 = new System.Windows.Forms.TextBox();
             this.tbValue = new System.Windows.Forms.TextBox();
+            this.ScrollBar1 = new System.Windows.Forms.HScrollBar();
+            this.TBscroll = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // top
@@ -77,11 +79,28 @@ namespace WindowsFormsApp1
             this.tbValue.Size = new System.Drawing.Size(95, 22);
             this.tbValue.TabIndex = 7;
             // 
+            // ScrollBar1
+            // 
+            this.ScrollBar1.Location = new System.Drawing.Point(279, 12);
+            this.ScrollBar1.Name = "ScrollBar1";
+            this.ScrollBar1.Size = new System.Drawing.Size(271, 27);
+            this.ScrollBar1.TabIndex = 8;
+            this.ScrollBar1.ValueChanged += new System.EventHandler(this.ScrollBar1_ValueChanged);
+            // 
+            // TBscroll
+            // 
+            this.TBscroll.Location = new System.Drawing.Point(279, 79);
+            this.TBscroll.Name = "TBscroll";
+            this.TBscroll.Size = new System.Drawing.Size(100, 22);
+            this.TBscroll.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(328, 306);
+            this.ClientSize = new System.Drawing.Size(1020, 427);
+            this.Controls.Add(this.TBscroll);
+            this.Controls.Add(this.ScrollBar1);
             this.Controls.Add(this.tbValue);
             this.Controls.Add(this.TB3);
             this.Controls.Add(this.TB2);
@@ -102,6 +121,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox TB2;
         private System.Windows.Forms.TextBox TB3;
         private System.Windows.Forms.TextBox tbValue;
+        private System.Windows.Forms.HScrollBar ScrollBar1;
+        private System.Windows.Forms.TextBox TBscroll;
     }
 }
 
