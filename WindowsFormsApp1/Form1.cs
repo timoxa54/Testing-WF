@@ -49,7 +49,29 @@ namespace WindowsFormsApp1
 
         private void ScrollBar1_ValueChanged(object sender, EventArgs e)
         {
-            TBscroll.Text = ScrollBar1.Value.ToString();
+            TBscroll_A.Text = SB_A.Value.ToString();
+            TB_del.Text = Math.Round(((double)SB_A.Value / SB_B.Value),3).ToString();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+
+        private void SB_B_ValueChanged(object sender, EventArgs e)
+        {
+            TBscroll_B.Text = SB_B.Value.ToString();
+            TB_del.Text = Math.Round(((double)SB_A.Value / SB_B.Value), 3).ToString();
         }
     }
 }

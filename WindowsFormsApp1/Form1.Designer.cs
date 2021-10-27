@@ -34,8 +34,13 @@ namespace WindowsFormsApp1
             this.TB2 = new System.Windows.Forms.TextBox();
             this.TB3 = new System.Windows.Forms.TextBox();
             this.tbValue = new System.Windows.Forms.TextBox();
-            this.ScrollBar1 = new System.Windows.Forms.HScrollBar();
-            this.TBscroll = new System.Windows.Forms.TextBox();
+            this.SB_A = new System.Windows.Forms.HScrollBar();
+            this.TBscroll_A = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TBscroll_B = new System.Windows.Forms.TextBox();
+            this.SB_B = new System.Windows.Forms.HScrollBar();
+            this.TB_del = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // top
@@ -79,28 +84,78 @@ namespace WindowsFormsApp1
             this.tbValue.Size = new System.Drawing.Size(95, 22);
             this.tbValue.TabIndex = 7;
             // 
-            // ScrollBar1
+            // SB_A
             // 
-            this.ScrollBar1.Location = new System.Drawing.Point(279, 12);
-            this.ScrollBar1.Name = "ScrollBar1";
-            this.ScrollBar1.Size = new System.Drawing.Size(271, 27);
-            this.ScrollBar1.TabIndex = 8;
-            this.ScrollBar1.ValueChanged += new System.EventHandler(this.ScrollBar1_ValueChanged);
+            this.SB_A.LargeChange = 1;
+            this.SB_A.Location = new System.Drawing.Point(259, 275);
+            this.SB_A.Maximum = 1000;
+            this.SB_A.Name = "SB_A";
+            this.SB_A.Size = new System.Drawing.Size(177, 33);
+            this.SB_A.TabIndex = 1;
+            this.SB_A.ValueChanged += new System.EventHandler(this.ScrollBar1_ValueChanged);
             // 
-            // TBscroll
+            // TBscroll_A
             // 
-            this.TBscroll.Location = new System.Drawing.Point(279, 79);
-            this.TBscroll.Name = "TBscroll";
-            this.TBscroll.Size = new System.Drawing.Size(100, 22);
-            this.TBscroll.TabIndex = 9;
+            this.TBscroll_A.Location = new System.Drawing.Point(259, 324);
+            this.TBscroll_A.Name = "TBscroll_A";
+            this.TBscroll_A.Size = new System.Drawing.Size(62, 22);
+            this.TBscroll_A.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(256, 248);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 17);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Делимое";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(482, 248);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 17);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Делитель";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // TBscroll_B
+            // 
+            this.TBscroll_B.Location = new System.Drawing.Point(485, 324);
+            this.TBscroll_B.Name = "TBscroll_B";
+            this.TBscroll_B.Size = new System.Drawing.Size(62, 22);
+            this.TBscroll_B.TabIndex = 12;
+            this.TBscroll_B.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // SB_B
+            // 
+            this.SB_B.LargeChange = 1;
+            this.SB_B.Location = new System.Drawing.Point(485, 275);
+            this.SB_B.Name = "SB_B";
+            this.SB_B.Size = new System.Drawing.Size(177, 33);
+            this.SB_B.TabIndex = 11;
+            this.SB_B.ValueChanged += new System.EventHandler(this.SB_B_ValueChanged);
+            // 
+            // TB_del
+            // 
+            this.TB_del.Location = new System.Drawing.Point(374, 378);
+            this.TB_del.Name = "TB_del";
+            this.TB_del.Size = new System.Drawing.Size(149, 22);
+            this.TB_del.TabIndex = 14;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1020, 427);
-            this.Controls.Add(this.TBscroll);
-            this.Controls.Add(this.ScrollBar1);
+            this.Controls.Add(this.TB_del);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.TBscroll_B);
+            this.Controls.Add(this.SB_B);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.TBscroll_A);
+            this.Controls.Add(this.SB_A);
             this.Controls.Add(this.tbValue);
             this.Controls.Add(this.TB3);
             this.Controls.Add(this.TB2);
@@ -121,8 +176,13 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox TB2;
         private System.Windows.Forms.TextBox TB3;
         private System.Windows.Forms.TextBox tbValue;
-        private System.Windows.Forms.HScrollBar ScrollBar1;
-        private System.Windows.Forms.TextBox TBscroll;
+        private System.Windows.Forms.HScrollBar SB_A;
+        private System.Windows.Forms.TextBox TBscroll_A;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox TBscroll_B;
+        private System.Windows.Forms.HScrollBar SB_B;
+        private System.Windows.Forms.TextBox TB_del;
     }
 }
 
